@@ -35,6 +35,7 @@
 
 #import <objc/runtime.h>
 
+#import "JSQMessagesTimestampFormatter.h"
 
 // Fixes rdar://26295020
 // See issue #1247 and Peter Steinberger's comment:
@@ -518,6 +519,11 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
     if (!isMediaMessage) {
         cell.textView.text = [messageItem text];
+        
+        NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
+        
+        cell.cellBottomDate.text = timeForDateString;
+        
         NSParameterAssert(cell.textView.text != nil);
 
         id<JSQMessageBubbleImageDataSource> bubbleImageDataSource = [collectionView.dataSource collectionView:collectionView messageBubbleImageDataForItemAtIndexPath:indexPath];

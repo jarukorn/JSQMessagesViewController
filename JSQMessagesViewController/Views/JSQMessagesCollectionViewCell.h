@@ -101,6 +101,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (weak, nonatomic, nullable) id<JSQMessagesCollectionViewCellDelegate> delegate;
 
+@property (weak, nonatomic, readonly, nullable) UILabel *cellBottomDate;
+
 /**
  *  Returns the label that is pinned to the top of the cell.
  *  This label is most commonly used to display message timestamps.
