@@ -41,6 +41,7 @@
 
 #import <objc/runtime.h>
 
+#import "JSQMessagesTimestampFormatter.h"
 
 // Fixes rdar://26295020
 // See issue #1247 and Peter Steinberger's comment:
@@ -557,7 +558,10 @@ JSQMessagesKeyboardControllerDelegate>
 
     if (!isMediaMessage) {
         cell.textView.text = [messageItem text];
-
+        
+        NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
+        cell.cellBottomDatetime.text = timeForDateString;
+        
         if ([UIDevice jsq_isCurrentDeviceBeforeiOS8]) {
             //  workaround for iOS 7 textView data detectors bug
             cell.textView.text = nil;
