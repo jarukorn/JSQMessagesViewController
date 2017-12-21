@@ -627,7 +627,7 @@ JSQMessagesKeyboardControllerDelegate>
     cell.layer.shouldRasterize = YES;
     [self collectionView:collectionView accessibilityForCell:cell indexPath:indexPath message:messageItem];
 
-    cell.cellBottomLabel.backgroundColor = [UIColor blueColor];
+//    cell.cellBottomLabel.backgroundColor = [UIColor blueColor];
     return cell;
 }
 
