@@ -26,7 +26,7 @@
 {
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentRight;
-    self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
+    self.cellBottomLabel.textAlignment = NSTextAlignmentRight; //NSTextAlignmentLeft;
 }
 
 @end
