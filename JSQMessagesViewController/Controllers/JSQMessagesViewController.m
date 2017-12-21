@@ -605,7 +605,7 @@ JSQMessagesKeyboardControllerDelegate>
     cell.cellTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellTopLabelAtIndexPath:indexPath];
     cell.messageBubbleTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:indexPath];
     cell.cellBottomLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellBottomLabelAtIndexPath:indexPath];
-    cell.cellBottomLabel.text = @"12312312313123";
+//    cell.cellBottomLabel.text = @"12312312313123";
     
     CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 60.0f : 15.0f;
 
@@ -623,7 +623,7 @@ JSQMessagesKeyboardControllerDelegate>
     cell.layer.shouldRasterize = YES;
     [self collectionView:collectionView accessibilityForCell:cell indexPath:indexPath message:messageItem];
 
-    cell.cellBottomLabel.backgroundColor = [UIColor blueColor];
+//    cell.cellBottomLabel.backgroundColor = [UIColor blueColor];
     return cell;
 }
 
