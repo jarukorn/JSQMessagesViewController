@@ -606,7 +606,10 @@ JSQMessagesKeyboardControllerDelegate>
     cell.cellTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellTopLabelAtIndexPath:indexPath];
     cell.messageBubbleTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:indexPath];
     cell.cellBottomLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellBottomLabelAtIndexPath:indexPath];
-    cell.cellBottomLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:[messageItem date]];
+    
+    NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
+    cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
+//    cell.cellBottomLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:[messageItem date]];
     
     CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 60.0f : 15.0f;
 
