@@ -88,7 +88,7 @@
                             <constraint firstAttribute="height" constant="20" id="xPR-Ph-Ze9"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.60784313725490191" green="0.62745098039215685" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.34901960784313724" green="0.396078431372549" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
