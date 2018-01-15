@@ -81,9 +81,8 @@
                             <constraint firstAttribute="width" constant="34" id="s63-fU-lfz"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GST-S0-H0i" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GST-S0-H0i" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
                         <rect key="frame" x="0.0" y="154" width="320" height="0.0"/>
-                        <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" id="ba0-73-RMD"/>
                         </constraints>
@@ -130,6 +129,7 @@
                 <outlet property="avatarImageView" destination="eyn-Kc-ieL" id="v9z-Lt-aL3"/>
                 <outlet property="cellBottomLabel" destination="4DC-Pi-frD" id="VcI-jZ-ZLp"/>
                 <outlet property="cellBottomLabelHeightConstraint" destination="ba0-73-RMD" id="bAx-bf-waC"/>
+                <outlet property="cellBottomSpace" destination="GST-S0-H0i" id="xmh-Gf-4P0"/>
                 <outlet property="cellTopLabel" destination="kKE-ju-Ll9" id="bQb-0g-WUK"/>
                 <outlet property="cellTopLabelHeightConstraint" destination="cj1-9J-gef" id="T4I-3w-vrl"/>
                 <outlet property="messageBubbleContainerView" destination="c7s-gr-Veg" id="EIY-s5-H9R"/>

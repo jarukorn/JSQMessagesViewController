@@ -81,9 +81,8 @@
                             <constraint firstAttribute="bottom" secondItem="pwp-9h-re6" secondAttribute="bottom" id="zt0-Sb-swu"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaA-Ms-wKc" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaA-Ms-wKc" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
                         <rect key="frame" x="0.0" y="154" width="320" height="0.0"/>
-                        <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" id="37g-Wh-X8P"/>
                         </constraints>
@@ -130,6 +129,7 @@
                 <outlet property="avatarImageView" destination="pwp-9h-re6" id="aY9-ae-BnR"/>
                 <outlet property="cellBottomLabel" destination="0fy-ap-uJ9" id="vax-0n-TIt"/>
                 <outlet property="cellBottomLabelHeightConstraint" destination="37g-Wh-X8P" id="q01-uC-5op"/>
+                <outlet property="cellBottomSpace" destination="OaA-Ms-wKc" id="1TR-w5-ASm"/>
                 <outlet property="cellTopLabel" destination="pAZ-J5-a3G" id="xgf-rL-jkK"/>
                 <outlet property="cellTopLabelHeightConstraint" destination="fjF-Ei-fQU" id="gSF-cP-ZR2"/>
                 <outlet property="messageBubbleContainerView" destination="amI-vw-udl" id="M5B-v7-NWl"/>

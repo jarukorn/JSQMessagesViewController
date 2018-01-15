@@ -28,12 +28,12 @@
 
 static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
-
 @interface JSQMessagesCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet JSQMessagesLabel *cellTopLabel;
 @property (weak, nonatomic) IBOutlet JSQMessagesLabel *messageBubbleTopLabel;
 @property (weak, nonatomic) IBOutlet JSQMessagesLabel *cellBottomLabel;
+@property (weak, nonatomic) IBOutlet JSQMessagesLabel *cellBottomSpace;
 
 @property (weak, nonatomic) IBOutlet UIView *messageBubbleContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *messageBubbleImageView;

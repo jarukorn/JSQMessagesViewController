@@ -109,6 +109,7 @@
  *  This label is most commonly used to display message delivery status.
  */
 @property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomLabel;
+@property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomSpace;
 
 /**
  *  Returns the text view of the cell. This text view contains the message body text.
