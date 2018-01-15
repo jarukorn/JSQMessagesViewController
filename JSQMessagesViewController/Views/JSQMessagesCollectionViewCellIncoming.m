@@ -26,12 +26,7 @@
 {
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentLeft;
-    self.cellBottomLabel.textAlignment = NSTextAlignmentLeft; //NSTextAlignmentRight;
-    
-    
-    self.messageBubbleTopLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
-    self.cellTopLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
-    self.cellBottomLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
+    self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
 }
 
 @end
