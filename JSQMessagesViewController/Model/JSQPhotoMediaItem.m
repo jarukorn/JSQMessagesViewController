@@ -72,8 +72,22 @@
     }
     
     if (self.cachedImageView == nil) {
-        CGSize size = [self mediaViewDisplaySize];
+        //CGSize size = [self mediaViewDisplaySize];
+        
         UIImageView *imageView = [[UIImageView alloc] initWithImage:self.image];
+        double newImageWidth = 0;
+        double newImageHeight = 0;
+
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { // iPad
+            newImageWidth = 315.0f;
+        } else { // iPhone
+            newImageWidth = 210.0f;
+        }
+        double currentImageWidth = self.image.size.width;
+        double currentImageHeight = self.image.size.height;
+        newImageHeight = currentImageHeight / (currentImageWidth / newImageWidth);
+        CGSize size = CGSizeMake(newImageWidth, newImageHeight);
+        
         imageView.frame = CGRectMake(0.0f, 0.0f, size.width, size.height);
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
