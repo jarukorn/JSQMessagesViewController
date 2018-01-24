@@ -569,7 +569,7 @@ JSQMessagesKeyboardControllerDelegate>
                                                                            attributes:@{ NSFontAttributeName : collectionView.collectionViewLayout.messageBubbleFont }];
         }
 
-        NSParameterAssert(cell.textView.text != nil);
+//        NSParameterAssert(cell.textView.text != nil);
 
         id<JSQMessageBubbleImageDataSource> bubbleImageDataSource = [collectionView.dataSource collectionView:collectionView messageBubbleImageDataForItemAtIndexPath:indexPath];
         cell.messageBubbleImageView.image = [bubbleImageDataSource messageBubbleImage];
@@ -609,8 +609,12 @@ JSQMessagesKeyboardControllerDelegate>
     cell.cellTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellTopLabelAtIndexPath:indexPath];
     cell.messageBubbleTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:indexPath];
     cell.cellBottomLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellBottomLabelAtIndexPath:indexPath];
-
-    CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 60.0f : 15.0f;
+    
+    NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
+    cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
+//    cell.cellBottomLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:[messageItem date]];
+    
+    CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 40.0f : 15.0f;
 
     if (isOutgoingMessage) {
         cell.messageBubbleTopLabel.textInsets = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, bubbleTopLabelInset);
@@ -626,6 +630,7 @@ JSQMessagesKeyboardControllerDelegate>
     cell.layer.shouldRasterize = YES;
     [self collectionView:collectionView accessibilityForCell:cell indexPath:indexPath message:messageItem];
 
+//    cell.cellBottomLabel.backgroundColor = [UIColor blueColor];
     return cell;
 }
 

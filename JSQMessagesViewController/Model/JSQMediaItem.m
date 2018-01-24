@@ -85,11 +85,13 @@
 
 - (CGSize)mediaViewDisplaySize
 {
+//    JSQMediaItem *item = (JSQMediaItem *)object;
+    
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         return CGSizeMake(315.0f, 225.0f);
     }
     
-    return CGSizeMake(210.0f, 150.0f);
+    return CGSizeMake(111.0f, 150.0f);
 }
 
 - (UIView *)mediaPlaceholderView

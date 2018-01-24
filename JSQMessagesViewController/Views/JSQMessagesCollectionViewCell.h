@@ -109,6 +109,7 @@
  *  This label is most commonly used to display message delivery status.
  */
 @property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomLabel;
+@property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomSpace;
 
 @property (weak, nonatomic, readonly) UILabel *cellBottomDatetime;
 

@@ -72,12 +72,37 @@
     }
     
     if (self.cachedImageView == nil) {
-        CGSize size = [self mediaViewDisplaySize];
+//        CGSize size = [self mediaViewDisplaySize];
+        
         UIImageView *imageView = [[UIImageView alloc] initWithImage:self.image];
+        double newImageWidth = 0;
+        double newImageHeight = 0;
+
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { // iPad
+            newImageHeight = 225.0f;
+        } else { // iPhone
+            newImageHeight = 150.0f;
+        }
+        double currentImageWidth = self.image.size.width;
+        double currentImageHeight = self.image.size.height;
+        newImageWidth = currentImageWidth / (currentImageHeight / newImageHeight);
+        
+        CGSize size = CGSizeMake(newImageWidth, newImageHeight);
+        
         imageView.frame = CGRectMake(0.0f, 0.0f, size.width, size.height);
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        NSLog(@"newImageHeight:  %f", newImageHeight);
+        NSLog(@"newImageWidth:  %f", newImageWidth);
+        
+        
         imageView.clipsToBounds = YES;
-        [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:imageView isOutgoing:self.appliesMediaViewMaskAsOutgoing];
+        imageView.layer.cornerRadius = 13;
+//        [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:imageView isOutgoing:self.appliesMediaViewMaskAsOutgoing];
+        imageView.backgroundColor = [UIColor clearColor];
+        
+        NSLog(@"image Height:  %f", imageView.bounds.size.height);
+        NSLog(@"image Width:  %f",imageView.bounds.size.width);
         self.cachedImageView = imageView;
     }
     

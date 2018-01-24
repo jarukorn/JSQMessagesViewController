@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "goldengate.png"
+      "filename" : "Screen Shot 2561-01-18 at 21.11.17.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "goldengate@2x.png"
+      "filename" : "Screen Shot 2561-01-18 at 21.11.17-1.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "goldengate@3x.png"
+      "filename" : "Screen Shot 2561-01-18 at 21.11.17-2.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
