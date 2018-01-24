@@ -97,7 +97,7 @@
         
         
         imageView.clipsToBounds = YES;
-        imageView.layer.cornerRadius = 20;
+        imageView.layer.cornerRadius = 13;
 //        [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:imageView isOutgoing:self.appliesMediaViewMaskAsOutgoing];
         imageView.backgroundColor = [UIColor clearColor];
         
