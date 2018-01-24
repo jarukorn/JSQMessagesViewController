@@ -98,7 +98,7 @@
         
         imageView.clipsToBounds = YES;
         [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:imageView isOutgoing:self.appliesMediaViewMaskAsOutgoing];
-        imageView.backgroundColor = [UIColor redColor];
+        imageView.backgroundColor = [UIColor clearColor];
         
         NSLog(@"image Height:  %f", imageView.bounds.size.height);
         NSLog(@"image Width:  %f",imageView.bounds.size.width);
