@@ -88,21 +88,19 @@
         newImageWidth = currentImageWidth / (currentImageHeight / newImageHeight);
         
         CGSize size = CGSizeMake(newImageWidth, newImageHeight);
-        
         imageView.frame = CGRectMake(0.0f, 0.0f, size.width, size.height);
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         
-        NSLog(@"newImageHeight:  %f", newImageHeight);
-        NSLog(@"newImageWidth:  %f", newImageWidth);
+//        NSLog(@"newImageHeight:  %f", newImageHeight);
+//        NSLog(@"newImageWidth:  %f", newImageWidth);
         
         
         imageView.clipsToBounds = YES;
         imageView.layer.cornerRadius = 10;
-//        [JSQMessagesMediaViewBubbleImageMasker applyBubbleImageMaskToMediaView:imageView isOutgoing:self.appliesMediaViewMaskAsOutgoing];
         imageView.backgroundColor = [UIColor clearColor];
         
-        NSLog(@"image Height:  %f", imageView.bounds.size.height);
-        NSLog(@"image Width:  %f",imageView.bounds.size.width);
+//        NSLog(@"image Height:  %f", imageView.bounds.size.height);
+//        NSLog(@"image Width:  %f",imageView.bounds.size.width);
         self.cachedImageView = imageView;
     }
     
