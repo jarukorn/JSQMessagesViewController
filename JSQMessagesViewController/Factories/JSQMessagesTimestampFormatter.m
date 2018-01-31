@@ -93,8 +93,8 @@
     
     [timestamp appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
     
-    [timestamp appendAttributedString:[[NSAttributedString alloc] initWithString:time
-                                                                      attributes:self.timeTextAttributes]];
+//    [timestamp appendAttributedString:[[NSAttributedString alloc] initWithString:time
+//                                                                      attributes:self.timeTextAttributes]];
     
     return [[NSAttributedString alloc] initWithAttributedString:timestamp];
 }
