@@ -93,6 +93,7 @@
     
     [timestamp appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
     
+    // remove showing time in datetime label on chatroom
 //    [timestamp appendAttributedString:[[NSAttributedString alloc] initWithString:time
 //                                                                      attributes:self.timeTextAttributes]];
     
