@@ -25,6 +25,7 @@
 
 #import "UIImage+JSQMessages.h"
 
+#import "JSQPhotoMediaItem.h"
 
 @interface JSQMessagesBubblesSizeCalculator ()
 
@@ -102,8 +103,30 @@
 
     CGSize finalSize = CGSizeZero;
 
-    if ([messageData isMediaMessage]) {
-        finalSize = [[messageData media] mediaViewDisplaySize];
+    if ([messageData isMediaMessage]) { // image
+        id<JSQMessageMediaData> mediaItem = [messageData media];
+        JSQPhotoMediaItem *photoItem = (JSQPhotoMediaItem *)mediaItem;
+        @try {
+            UIImage *image = photoItem.image;
+            // use image
+            double newImageWidth = 0;
+            double newImageHeight = 0;
+            
+            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { // iPad
+                newImageHeight = 225.0f;
+            } else { // iPhone
+                newImageHeight = 150.0f;
+            }
+            double currentImageWidth = image.size.width;
+            double currentImageHeight = image.size.height;
+            newImageWidth = currentImageWidth / (currentImageHeight / newImageHeight);
+            
+            finalSize = CGSizeMake(newImageWidth, newImageHeight);
+        }
+        @catch (NSException * e) {
+            finalSize = CGSizeMake(0.001f, 0.001f);
+            NSLog(@"Exception: %@", e);
+        }
     }
     else {
         CGSize avatarSize = [self jsq_avatarSizeForMessageData:messageData withLayout:layout];

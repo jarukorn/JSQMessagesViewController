@@ -41,6 +41,7 @@
 
 #import <objc/runtime.h>
 
+#import "JSQMessagesTimestampFormatter.h"
 
 // Fixes rdar://26295020
 // See issue #1247 and Peter Steinberger's comment:
@@ -558,6 +559,9 @@ JSQMessagesKeyboardControllerDelegate>
     if (!isMediaMessage) {
         cell.textView.text = [messageItem text];
 
+        NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
+        cell.cellBottomDatetime.text = timeForDateString;
+        
         if ([UIDevice jsq_isCurrentDeviceBeforeiOS8]) {
             //  workaround for iOS 7 textView data detectors bug
             cell.textView.text = nil;
@@ -565,7 +569,8 @@ JSQMessagesKeyboardControllerDelegate>
                                                                            attributes:@{ NSFontAttributeName : collectionView.collectionViewLayout.messageBubbleFont }];
         }
 
-        NSParameterAssert(cell.textView.text != nil);
+        // pod: no use for now
+//        NSParameterAssert(cell.textView.text != nil);
 
         id<JSQMessageBubbleImageDataSource> bubbleImageDataSource = [collectionView.dataSource collectionView:collectionView messageBubbleImageDataForItemAtIndexPath:indexPath];
         cell.messageBubbleImageView.image = [bubbleImageDataSource messageBubbleImage];
@@ -606,7 +611,12 @@ JSQMessagesKeyboardControllerDelegate>
     cell.messageBubbleTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:indexPath];
     cell.cellBottomLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellBottomLabelAtIndexPath:indexPath];
 
-    CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 60.0f : 15.0f;
+    [cell.cellBottomLabel setFont:[UIFont systemFontOfSize:10]];
+    
+    NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
+    cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
+    
+    CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 40.0f : 15.0f;
 
     if (isOutgoingMessage) {
         cell.messageBubbleTopLabel.textInsets = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, bubbleTopLabelInset);

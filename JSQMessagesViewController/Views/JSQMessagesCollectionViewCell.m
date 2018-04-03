@@ -34,6 +34,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 @property (weak, nonatomic) IBOutlet JSQMessagesLabel *cellTopLabel;
 @property (weak, nonatomic) IBOutlet JSQMessagesLabel *messageBubbleTopLabel;
 @property (weak, nonatomic) IBOutlet JSQMessagesLabel *cellBottomLabel;
+@property (weak, nonatomic) IBOutlet JSQMessagesLabel *cellBottomSpace;
 
 @property (weak, nonatomic) IBOutlet UIView *messageBubbleContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *messageBubbleImageView;
@@ -119,13 +120,13 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
     self.cellTopLabel.textAlignment = NSTextAlignmentCenter;
     self.cellTopLabel.font = [UIFont boldSystemFontOfSize:12.0f];
-    self.cellTopLabel.textColor = [UIColor lightGrayColor];
+    self.cellTopLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
 
     self.messageBubbleTopLabel.font = [UIFont systemFontOfSize:12.0f];
-    self.messageBubbleTopLabel.textColor = [UIColor lightGrayColor];
+    self.messageBubbleTopLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
 
     self.cellBottomLabel.font = [UIFont systemFontOfSize:11.0f];
-    self.cellBottomLabel.textColor = [UIColor lightGrayColor];
+    self.cellBottomLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jsq_handleTapGesture:)];
     [self addGestureRecognizer:tap];
