@@ -79,7 +79,7 @@
         if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { // iPad
             newImageHeight = 225.0f;
         } else { // iPhone
-            newImageHeight = 150.0f;
+            newImageHeight = 120.0f;
         }
         double currentImageWidth = self.image.size.width;
         double currentImageHeight = self.image.size.height;

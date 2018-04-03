@@ -112,15 +112,30 @@
             double newImageWidth = 0;
             double newImageHeight = 0;
             
+            double maximumWidth = [UIScreen mainScreen].bounds.size.width * 0.65;
+            double maximumHeight = [UIScreen mainScreen].bounds.size.height * 0.45;
+            
             if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { // iPad
                 newImageHeight = 225.0f;
             } else { // iPhone
-                newImageHeight = 150.0f;
+                newImageHeight = 300.0f;
             }
             double currentImageWidth = image.size.width;
             double currentImageHeight = image.size.height;
             newImageWidth = currentImageWidth / (currentImageHeight / newImageHeight);
             
+            if (currentImageWidth > currentImageHeight) { // horizontal image
+                newImageWidth = maximumWidth;
+                double percent = maximumWidth / currentImageWidth;
+                newImageHeight = currentImageHeight * percent;
+            } else { // vertical image
+                newImageHeight = maximumHeight;
+                double percent = maximumHeight / currentImageHeight;
+                newImageWidth = currentImageWidth * percent;
+            }
+            
+            NSLog(@"newImageWidth: %f", newImageWidth);
+            NSLog(@"newImageHeight: %f", newImageHeight);
             finalSize = CGSizeMake(newImageWidth, newImageHeight);
         }
         @catch (NSException * e) {
