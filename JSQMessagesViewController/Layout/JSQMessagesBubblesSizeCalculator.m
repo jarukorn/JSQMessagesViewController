@@ -112,8 +112,8 @@
             double newImageWidth = 0;
             double newImageHeight = 0;
             
-            double maximumWidth = [UIScreen mainScreen].bounds.size.width * 0.65;
-            double maximumHeight = [UIScreen mainScreen].bounds.size.height * 0.45;
+            double maximumWidth = [UIScreen mainScreen].bounds.size.width * 0.68;
+            double maximumHeight = [UIScreen mainScreen].bounds.size.height * 0.40;
             
             if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { // iPad
                 newImageHeight = 225.0f;
@@ -124,7 +124,7 @@
             double currentImageHeight = image.size.height;
             newImageWidth = currentImageWidth / (currentImageHeight / newImageHeight);
             
-            if (currentImageWidth > currentImageHeight) { // horizontal image
+            if (currentImageWidth >= currentImageHeight) { // horizontal image
                 newImageWidth = maximumWidth;
                 double percent = maximumWidth / currentImageWidth;
                 newImageHeight = currentImageHeight * percent;
