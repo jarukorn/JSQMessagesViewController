@@ -72,6 +72,11 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
     self.typingMessageLabel.text = message;
 }
 
+- (UILabel *)getTypingMessageLabel
+{
+    return _typingMessageLabel;
+}
+
 - (void)setBackgroundColor:(UIColor *)backgroundColor
 {
     [super setBackgroundColor:backgroundColor];

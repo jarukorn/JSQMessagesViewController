@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -100,17 +100,30 @@
                         <color key="textColor" red="0.34901960780000002" green="0.39607843139999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFr-C4-XZD" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
+                        <rect key="frame" x="285" y="122" width="35" height="15"/>
+                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="yyo-dX-UbN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.39607843139999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="L7P-ZK-ane" firstAttribute="top" secondItem="ZFV-UN-Esn" secondAttribute="bottom" id="0pK-MY-9dM"/>
                 <constraint firstItem="ZFV-UN-Esn" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="9Bg-mL-0E3"/>
+                <constraint firstItem="HFr-C4-XZD" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="trailing" constant="5" id="Dqb-5H-Oim"/>
                 <constraint firstAttribute="trailing" secondItem="fBo-fA-HtW" secondAttribute="trailing" id="Fsz-4Q-F8m"/>
                 <constraint firstItem="SNA-er-it0" firstAttribute="top" secondItem="naF-k5-FCA" secondAttribute="bottom" id="JKB-O4-V9b"/>
                 <constraint firstItem="ZFV-UN-Esn" firstAttribute="top" secondItem="Myh-WT-0iC" secondAttribute="top" id="L8g-wd-vgc"/>
+                <constraint firstItem="fBo-fA-HtW" firstAttribute="top" secondItem="HFr-C4-XZD" secondAttribute="bottom" constant="2" id="LZp-Bd-8vA"/>
                 <constraint firstAttribute="trailing" secondItem="L7P-ZK-ane" secondAttribute="trailing" id="MpG-jG-NAh"/>
                 <constraint firstAttribute="trailing" secondItem="ZFV-UN-Esn" secondAttribute="trailing" id="X0w-g4-UPr"/>
                 <constraint firstItem="naF-k5-FCA" firstAttribute="top" secondItem="L7P-ZK-ane" secondAttribute="bottom" id="Xen-0c-Gsn"/>
+                <constraint firstAttribute="trailing" secondItem="HFr-C4-XZD" secondAttribute="trailing" id="YZZ-i8-nsZ"/>
                 <constraint firstAttribute="trailing" secondItem="SNA-er-it0" secondAttribute="trailing" id="ebN-yb-MPJ"/>
                 <constraint firstAttribute="bottom" secondItem="SNA-er-it0" secondAttribute="bottom" id="ezP-pf-mLO"/>
                 <constraint firstItem="L7P-ZK-ane" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="h6D-mh-YL3"/>

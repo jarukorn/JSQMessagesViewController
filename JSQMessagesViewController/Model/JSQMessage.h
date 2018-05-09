@@ -63,6 +63,7 @@
  */
 @property (copy, nonatomic, readonly) id<JSQMessageMediaData> media;
 
+@property (copy, nonatomic, readonly) NSString *readStatus;
 
 #pragma mark - Initialization
 

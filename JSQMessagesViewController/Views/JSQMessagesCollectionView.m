@@ -106,7 +106,7 @@
                         messageBubbleColor:self.typingIndicatorMessageBubbleColor
                        shouldDisplayOnLeft:self.typingIndicatorDisplaysOnLeft
                          forCollectionView:self];
-
+    
     return footerView;
 }
 

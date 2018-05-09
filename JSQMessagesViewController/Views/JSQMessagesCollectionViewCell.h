@@ -111,6 +111,7 @@
 @property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomLabel;
 @property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomSpace;
 @property (weak, nonatomic, readonly) UILabel *cellBottomDatetime;
+@property (weak, nonatomic, readonly) JSQMessagesLabel *cellBottomReadStatus;
 
 /**
  *  Returns the text view of the cell. This text view contains the message body text.

@@ -197,8 +197,10 @@ JSQMessagesKeyboardControllerDelegate>
     // NOTE: let this behavior be opt-in for now
     // [JSQMessagesCollectionViewCell registerMenuAction:@selector(delete:)];
 
-    self.showTypingIndicator = NO;
+    self.showTypingIndicator = YES;
+    self.typingMessageLabel.text = @"2123";
     self.footerReuseIdentifier = [JSQMessagesTypingIndicatorFooterView footerReuseIdentifier];
+    
     self.showLoadEarlierMessagesHeader = NO;
     self.topContentAdditionalInset = 0.0f;
 
@@ -234,11 +236,6 @@ JSQMessagesKeyboardControllerDelegate>
 {
     _typingMessageLabel = typingMessageLabel;
 }
-//
-//- (void)setTypingMessage:(NSString *)message
-//{
-//    _typingMessageLabel.text = message;
-//}
 
 - (void)setShowTypingIndicator:(BOOL)showTypingIndicator
 {
@@ -619,11 +616,12 @@ JSQMessagesKeyboardControllerDelegate>
     cell.cellTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellTopLabelAtIndexPath:indexPath];
     cell.messageBubbleTopLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:indexPath];
     cell.cellBottomLabel.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellBottomLabelAtIndexPath:indexPath];
-
-    [cell.cellBottomLabel setFont:[UIFont systemFontOfSize:10]];
+    cell.cellBottomReadStatus.attributedText = [collectionView.dataSource collectionView:collectionView attributedTextForCellBottomLabelAtIndexPath:indexPath];
+    
     
     NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
     cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
+    cell.cellBottomReadStatus.text = [messageItem readStatus];
     
     CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 40.0f : 15.0f;
 

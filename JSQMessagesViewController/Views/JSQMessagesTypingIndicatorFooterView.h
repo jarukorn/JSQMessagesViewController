@@ -64,4 +64,6 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight;
                shouldDisplayOnLeft:(BOOL)shouldDisplayOnLeft
                  forCollectionView:(UICollectionView *)collectionView;
 
+- (void)getTypingMessageLabel:(UILabel *)typingMessageLabel;
+- (UILabel *)getTypingMessageLabel;
 @end

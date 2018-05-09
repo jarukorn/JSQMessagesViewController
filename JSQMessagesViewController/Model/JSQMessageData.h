@@ -90,6 +90,8 @@
  */
 - (NSString *)text;
 
+- (NSString *)readStatus;
+
 /**
  *  @return The media item of the message.
  *  
