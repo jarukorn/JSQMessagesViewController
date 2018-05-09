@@ -98,7 +98,8 @@
 - (instancetype)initWithSenderId:(NSString *)senderId
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
-                            text:(NSString *)text;
+                            text:(NSString *)text
+                      readStatus:(NSString *)readStatus;
 /**
  *  Initializes and returns a message object having the given senderId, displayName, media,
  *  and current system date.
@@ -130,7 +131,8 @@
 - (instancetype)initWithSenderId:(NSString *)senderId
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
-                           media:(id<JSQMessageMediaData>)media;
+                           media:(id<JSQMessageMediaData>)media
+                      readStatus:(NSString *)readStatus;
 
 /**
  *  Not a valid initializer.
