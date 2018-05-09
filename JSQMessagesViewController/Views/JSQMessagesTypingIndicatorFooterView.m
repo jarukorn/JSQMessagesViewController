@@ -22,7 +22,7 @@
 
 #import "UIImage+JSQMessages.h"
 
-const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
+const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 28.0f;
 
 
 @interface JSQMessagesTypingIndicatorFooterView ()
@@ -94,8 +94,8 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
     NSParameterAssert(messageBubbleColor != nil);
     NSParameterAssert(collectionView != nil);
     
-    CGFloat bubbleMarginMinimumSpacing = 6.0f;
-    CGFloat indicatorMarginMinimumSpacing = 26.0f;
+    CGFloat bubbleMarginMinimumSpacing = 1.0f;
+    CGFloat indicatorMarginMinimumSpacing = 18.0f;
     
     JSQMessagesBubbleImageFactory *bubbleImageFactory = [[JSQMessagesBubbleImageFactory alloc] init];
     
