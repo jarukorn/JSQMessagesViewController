@@ -54,13 +54,14 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                      text:self.text];
+                                                      text:self.text
+                                                      readStatus:@"test"];
     XCTAssertNotNil(msg, @"Message should not be nil");
 }
 
 - (void)testTextMessageInvalidInit
 {
-    XCTAssertThrows([[JSQMessage alloc] initWithSenderId:nil senderDisplayName:nil date:nil text:nil], @"Invalid init should throw");
+    XCTAssertThrows([[JSQMessage alloc] initWithSenderId:nil senderDisplayName:nil date:nil text:nil  readStatus:nil], @"Invalid init should throw");
 }
 
 - (void)testTextMessageIsEqual
@@ -68,7 +69,8 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                      text:self.text];
+                                                      text:self.text
+                                                      readStatus:@"test"];
     JSQMessage *copy = [msg copy];
     
     XCTAssertEqualObjects(msg, copy, @"Copied messages should be equal");
@@ -83,7 +85,8 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                      text:self.text];
+                                                      text:self.text
+                                                readStatus:@""];
     NSData *msgData = [NSKeyedArchiver archivedDataWithRootObject:msg];
     
     JSQMessage *unarchivedMsg = [NSKeyedUnarchiver unarchiveObjectWithData:msgData];

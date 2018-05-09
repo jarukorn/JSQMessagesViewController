@@ -150,6 +150,7 @@
                 <outlet property="messageBubbleImageView" destination="bVS-Pb-IYj" id="a5R-de-jPi"/>
                 <outlet property="messageBubbleTopLabel" destination="L7P-ZK-ane" id="BZP-nV-TkH"/>
                 <outlet property="messageBubbleTopLabelHeightConstraint" destination="p6M-fU-N2U" id="cXJ-zw-CKt"/>
+                <outlet property="readStatusLabel" destination="HFr-C4-XZD" id="Otv-5q-uKn"/>
                 <outlet property="textView" destination="glw-q0-5eK" id="JyM-Pu-l67"/>
                 <outlet property="textViewAvatarHorizontalSpaceConstraint" destination="NX3-KU-c4l" id="CpV-6r-LIg"/>
                 <outlet property="textViewBottomVerticalSpaceConstraint" destination="u4e-PB-gv2" id="lLM-4s-5gy"/>

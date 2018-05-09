@@ -26,21 +26,24 @@
 + (instancetype)messageWithSenderId:(NSString *)senderId
                         displayName:(NSString *)displayName
                                text:(NSString *)text
+                         readStatus:(NSString *)readStatus
 {
     return [[self alloc] initWithSenderId:senderId
                         senderDisplayName:displayName
                                      date:[NSDate date]
-                                     text:text];
+                                     text:text
+                               readStatus:readStatus];
 }
 
 - (instancetype)initWithSenderId:(NSString *)senderId
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                             text:(NSString *)text
+                      readStatus:(NSString *)readStatus
 {
     NSParameterAssert(text != nil);
-
-    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:NO];
+    
+    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:NO readStatus:readStatus];
     if (self) {
         _text = [text copy];
     }
@@ -50,21 +53,24 @@
 + (instancetype)messageWithSenderId:(NSString *)senderId
                         displayName:(NSString *)displayName
                               media:(id<JSQMessageMediaData>)media
+                         readStatus:(NSString *)readStatus
 {
     return [[self alloc] initWithSenderId:senderId
                         senderDisplayName:displayName
                                      date:[NSDate date]
-                                    media:media];
+                                    media:media
+                               readStatus:readStatus];
 }
 
 - (instancetype)initWithSenderId:(NSString *)senderId
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                            media:(id<JSQMessageMediaData>)media
+                      readStatus:(NSString *)readStatus
 {
     NSParameterAssert(media != nil);
-
-    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:YES];
+    
+    self = [self initWithSenderId:senderId senderDisplayName:senderDisplayName date:date isMedia:YES readStatus:readStatus];
     if (self) {
         _media = media;
     }
@@ -75,17 +81,19 @@
                senderDisplayName:(NSString *)senderDisplayName
                             date:(NSDate *)date
                          isMedia:(BOOL)isMedia
+                      readStatus:(NSString *)readStatus
 {
     NSParameterAssert(senderId != nil);
     NSParameterAssert(senderDisplayName != nil);
     NSParameterAssert(date != nil);
-
+    
     self = [super init];
     if (self) {
         _senderId = [senderId copy];
         _senderDisplayName = [senderDisplayName copy];
         _date = [date copy];
         _isMediaMessage = isMedia;
+        _readStatus = readStatus;
     }
     return self;
 }
@@ -102,19 +110,19 @@
     if (self == object) {
         return YES;
     }
-
+    
     if (![object isKindOfClass:[self class]]) {
         return NO;
     }
-
+    
     JSQMessage *aMessage = (JSQMessage *)object;
-
+    
     if (self.isMediaMessage != aMessage.isMediaMessage) {
         return NO;
     }
-
+    
     BOOL hasEqualContent = self.isMediaMessage ? [self.media isEqual:aMessage.media] : [self.text isEqualToString:aMessage.text];
-
+    
     return [self.senderId isEqualToString:aMessage.senderId]
     && [self.senderDisplayName isEqualToString:aMessage.senderDisplayName]
     && ([self.date compare:aMessage.date] == NSOrderedSame)
@@ -150,6 +158,7 @@
         _isMediaMessage = [aDecoder decodeBoolForKey:NSStringFromSelector(@selector(isMediaMessage))];
         _text = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(text))];
         _media = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(media))];
+        _readStatus = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(readStatus))];
     }
     return self;
 }
@@ -161,7 +170,8 @@
     [aCoder encodeObject:self.date forKey:NSStringFromSelector(@selector(date))];
     [aCoder encodeBool:self.isMediaMessage forKey:NSStringFromSelector(@selector(isMediaMessage))];
     [aCoder encodeObject:self.text forKey:NSStringFromSelector(@selector(text))];
-
+    [aCoder encodeObject:self.readStatus forKey:NSStringFromSelector(@selector(readStatus))];
+    
     if ([self.media conformsToProtocol:@protocol(NSCoding)]) {
         [aCoder encodeObject:self.media forKey:NSStringFromSelector(@selector(media))];
     }
@@ -175,13 +185,15 @@
         return [[[self class] allocWithZone:zone] initWithSenderId:self.senderId
                                                  senderDisplayName:self.senderDisplayName
                                                               date:self.date
-                                                             media:self.media];
+                                                             media:self.media
+                                                        readStatus:self.readStatus];
     }
-
+    
     return [[[self class] allocWithZone:zone] initWithSenderId:self.senderId
                                              senderDisplayName:self.senderDisplayName
                                                           date:self.date
-                                                          text:self.text];
+                                                          text:self.text
+                                                    readStatus:self.readStatus];
 }
 
 @end

@@ -172,7 +172,8 @@
     if (!copyMessage) {
         copyMessage = [JSQMessage messageWithSenderId:kJSQDemoAvatarIdJobs
                                           displayName:kJSQDemoAvatarDisplayNameJobs
-                                                 text:@"First received!"];
+                                                 text:@"First received!"
+                                           readStatus:@"test"];
     }
     
     /**
@@ -250,7 +251,8 @@
             
             newMessage = [JSQMessage messageWithSenderId:randomUserId
                                              displayName:self.demoData.users[randomUserId]
-                                                   media:newMediaData];
+                                                   media:newMediaData
+                                              readStatus:@"test"];
         }
         else {
             /**
@@ -258,7 +260,8 @@
              */
             newMessage = [JSQMessage messageWithSenderId:randomUserId
                                              displayName:self.demoData.users[randomUserId]
-                                                    text:copyMessage.text];
+                                                    text:copyMessage.text
+                                              readStatus:@"test"];
         }
         
         /**
@@ -342,7 +345,8 @@
     JSQMessage *message = [[JSQMessage alloc] initWithSenderId:senderId
                                              senderDisplayName:senderDisplayName
                                                           date:date
-                                                          text:text];
+                                                          text:text
+                                                    readStatus:@"test"];
     
     [self.demoData.messages addObject:message];
     
@@ -684,7 +688,8 @@
         JSQMessage *message = [[JSQMessage alloc] initWithSenderId:self.senderId
                                                  senderDisplayName:self.senderDisplayName
                                                               date:[NSDate date]
-                                                             media:item];
+                                                             media:item
+                                                        readStatus:@"test"];
         [self.demoData.messages addObject:message];
         [self finishSendingMessage];
         return NO;

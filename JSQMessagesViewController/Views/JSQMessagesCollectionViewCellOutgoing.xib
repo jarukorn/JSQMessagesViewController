@@ -100,7 +100,7 @@
                         <color key="textColor" red="0.34901960780000002" green="0.39607843139999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXC-9x-TBB" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell read status label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXC-9x-TBB" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
                         <rect key="frame" x="0.0" y="122" width="35" height="15"/>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -150,6 +150,7 @@
                 <outlet property="messageBubbleImageView" destination="cMv-U6-n1D" id="wGX-lz-OkY"/>
                 <outlet property="messageBubbleTopLabel" destination="EF4-Of-SSc" id="lpb-cD-cfe"/>
                 <outlet property="messageBubbleTopLabelHeightConstraint" destination="T6g-Mj-teR" id="DpB-w5-xLL"/>
+                <outlet property="readStatusLabel" destination="bXC-9x-TBB" id="tMd-gm-iVA"/>
                 <outlet property="textView" destination="cex-pa-3Ri" id="8Nr-pB-wsN"/>
                 <outlet property="textViewAvatarHorizontalSpaceConstraint" destination="AcF-Uc-jVt" id="X89-Rt-fZJ"/>
                 <outlet property="textViewBottomVerticalSpaceConstraint" destination="NvP-el-6dx" id="LOg-N6-mB8"/>

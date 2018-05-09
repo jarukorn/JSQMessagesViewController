@@ -34,9 +34,9 @@
     self.cellBottomSpace.hidden = true;
     [self.cellBottomLabel setFont:[UIFont systemFontOfSize:10]];
     
-    self.cellBottomReadStatus.textAlignment = NSTextAlignmentRight;
-    self.cellBottomReadStatus.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
-    [self.cellBottomReadStatus setFont:[UIFont systemFontOfSize:10]];
+    self.readStatusLabel.textAlignment = NSTextAlignmentLeft;
+    self.readStatusLabel.textColor = [UIColor colorWithRed:89/255.f green:101/255.f blue:116/255.f alpha:1];
+    [self.readStatusLabel setFont:[UIFont systemFontOfSize:10]];
 }
 
 @end

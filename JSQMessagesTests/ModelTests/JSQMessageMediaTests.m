@@ -74,13 +74,14 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                     media:self.fakeMediaData];
+                                                     media:self.fakeMediaData
+                                                readStatus:@"test"];
     XCTAssertNotNil(msg, @"Message should not be nil");
 }
 
 - (void)testMediaMessageInvalidInit
 {
-    XCTAssertThrows([[JSQMessage alloc] initWithSenderId:nil senderDisplayName:nil date:nil media:nil], @"Invalid init should throw");
+    XCTAssertThrows([[JSQMessage alloc] initWithSenderId:nil senderDisplayName:nil date:nil media:nil readStatus:nil], @"Invalid init should throw");
 }
 
 - (void)testMediaMessageIsEqual
@@ -88,7 +89,8 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                     media:self.fakeMediaData];
+                                                     media:self.fakeMediaData
+                                                readStatus:@""];
     JSQMessage *copy = [msg copy];
     
     XCTAssertEqualObjects(msg, copy, @"Copied messages should be equal");
@@ -103,7 +105,8 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                     media:[FakeMedia new]];
+                                                     media:[FakeMedia new]
+                                                readStatus:@""];
     
     NSData *msgData = [NSKeyedArchiver archivedDataWithRootObject:msg];
     
