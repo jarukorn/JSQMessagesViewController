@@ -32,6 +32,7 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
 
 @property (weak, nonatomic) IBOutlet UIImageView *typingIndicatorImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *typingIndicatorImageViewRightHorizontalConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *typingMessageLabel;
 
 @end
 
@@ -52,6 +53,7 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
     return NSStringFromClass([JSQMessagesTypingIndicatorFooterView class]);
 }
 
+
 #pragma mark - Initialization
 
 - (void)awakeFromNib
@@ -64,6 +66,11 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
 }
 
 #pragma mark - Reusable view
+
+- (void)setTypingMessage:(NSString *)message
+{
+    self.typingMessageLabel.text = message;
+}
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
 {

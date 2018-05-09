@@ -154,8 +154,9 @@
  *  Setting this property to `NO` will animate hiding the typing indicator immediately. You will need to scroll
  *  to the bottom of the collection view in order to see the typing indicator. You may use `scrollToBottomAnimated:` for this.
  */
+@property (copy, nonatomic) NSString *footerReuseIdentifier;
 @property (assign, nonatomic) BOOL showTypingIndicator;
-
+@property (assign, nonatomic) UILabel *typingMessageLabel;
 /**
  *  Specifies whether or not the view controller should show the "load earlier messages" header view.
  *

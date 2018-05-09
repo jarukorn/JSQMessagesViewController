@@ -198,9 +198,8 @@ JSQMessagesKeyboardControllerDelegate>
     // [JSQMessagesCollectionViewCell registerMenuAction:@selector(delete:)];
 
     self.showTypingIndicator = NO;
-
+    self.footerReuseIdentifier = [JSQMessagesTypingIndicatorFooterView footerReuseIdentifier];
     self.showLoadEarlierMessagesHeader = NO;
-
     self.topContentAdditionalInset = 0.0f;
 
     [self jsq_updateCollectionViewInsets];
@@ -230,6 +229,17 @@ JSQMessagesKeyboardControllerDelegate>
 }
 
 #pragma mark - Setters
+
+//- (void)setShowTypingMessageLabel:(UILabel *)typingMessageLabel
+//{
+//    typingMessageLabel = @"123";
+//    _typingMessageLabel = typingMessageLabel;
+//}
+//
+//- (void)setTypingMessage:(NSString *)message
+//{
+//    _typingMessageLabel.text = message;
+//}
 
 - (void)setShowTypingIndicator:(BOOL)showTypingIndicator
 {
@@ -673,7 +683,7 @@ JSQMessagesKeyboardControllerDelegate>
     if (!self.showTypingIndicator) {
         return CGSizeZero;
     }
-
+    
     return CGSizeMake([collectionViewLayout itemWidth], kJSQMessagesTypingIndicatorFooterViewHeight);
 }
 
