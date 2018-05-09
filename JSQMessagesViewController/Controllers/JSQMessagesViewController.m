@@ -168,8 +168,11 @@ JSQMessagesKeyboardControllerDelegate>
 
 #pragma mark - Initialization
 
+
+
 - (void)jsq_configureMessagesViewController
 {
+    
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.jsq_isObserving = NO;
@@ -199,7 +202,9 @@ JSQMessagesKeyboardControllerDelegate>
 
     self.showTypingIndicator = YES;
     self.typingMessageLabel.text = @"2123";
-    self.footerReuseIdentifier = [JSQMessagesTypingIndicatorFooterView footerReuseIdentifier];
+    self.footerCellIdentifier = [JSQMessagesTypingIndicatorFooterView footerReuseIdentifier];
+    
+    self.collectionView.typingMessageLabel.text = @"4123";
     
     self.showLoadEarlierMessagesHeader = NO;
     self.topContentAdditionalInset = 0.0f;
@@ -232,9 +237,10 @@ JSQMessagesKeyboardControllerDelegate>
 
 #pragma mark - Setters
 
-- (void)setShowTypingMessageLabel:(UILabel *)typingMessageLabel
+- (void)setShowTypingMessageLabel:(NSString *)message
 {
-    _typingMessageLabel = typingMessageLabel;
+//    _typingMessageLabel = typingMessageLabel;
+    [_collectionView setTypingMessage:message];
 }
 
 - (void)setShowTypingIndicator:(BOOL)showTypingIndicator
@@ -280,6 +286,7 @@ JSQMessagesKeyboardControllerDelegate>
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
     NSParameterAssert(self.senderId != nil);
     NSParameterAssert(self.senderDisplayName != nil);
 
@@ -287,7 +294,7 @@ JSQMessagesKeyboardControllerDelegate>
     self.toolbarHeightConstraint.constant = self.inputToolbar.preferredDefaultHeight;
     [self.view layoutIfNeeded];
     [self.collectionView.collectionViewLayout invalidateLayout];
-
+    
     if (self.automaticallyScrollsToMostRecentMessage) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self scrollToBottomAnimated:NO];
@@ -563,7 +570,7 @@ JSQMessagesKeyboardControllerDelegate>
     else {
         cellIdentifier = isOutgoingMessage ? self.outgoingCellIdentifier : self.incomingCellIdentifier;
     }
-
+    
     JSQMessagesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.delegate = collectionView;
 

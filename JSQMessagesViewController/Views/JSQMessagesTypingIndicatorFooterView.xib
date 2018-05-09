@@ -30,11 +30,11 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Typing message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-UQ-HiF" userLabel="Cell bottom label">
-                    <rect key="frame" x="6" y="16" width="71.5" height="15"/>
+                    <rect key="frame" x="82" y="16" width="223" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="IlD-X9-oKI"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.34901960780000002" green="0.39607843139999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -43,16 +43,17 @@
                 <constraint firstAttribute="trailing" secondItem="Vwf-dy-PS6" secondAttribute="trailing" constant="260" id="1Tm-qD-wIK"/>
                 <constraint firstAttribute="bottom" secondItem="Z1D-Tr-HPK" secondAttribute="bottom" constant="6" id="EVf-Sx-8mX"/>
                 <constraint firstAttribute="bottom" secondItem="Vwf-dy-PS6" secondAttribute="bottom" constant="6" id="Hik-Wl-aK2"/>
-                <constraint firstItem="Bvy-UQ-HiF" firstAttribute="leading" secondItem="ajJ-uk-b04" secondAttribute="leading" constant="6" id="QIm-nB-6LP"/>
                 <constraint firstAttribute="trailing" secondItem="Z1D-Tr-HPK" secondAttribute="trailing" constant="246" id="YMl-ej-UZl"/>
+                <constraint firstItem="Bvy-UQ-HiF" firstAttribute="leading" secondItem="Z1D-Tr-HPK" secondAttribute="trailing" constant="8" id="b8X-Zs-Xku"/>
                 <constraint firstItem="Bvy-UQ-HiF" firstAttribute="centerY" secondItem="ajJ-uk-b04" secondAttribute="centerY" id="eru-Mh-wLa"/>
+                <constraint firstAttribute="trailing" secondItem="Bvy-UQ-HiF" secondAttribute="trailing" constant="15" id="quR-XL-cHT"/>
             </constraints>
             <connections>
                 <outlet property="bubbleImageView" destination="Z1D-Tr-HPK" id="WpE-rP-oYB"/>
                 <outlet property="bubbleImageViewRightHorizontalConstraint" destination="YMl-ej-UZl" id="Thu-7D-dhU"/>
                 <outlet property="typingIndicatorImageView" destination="Vwf-dy-PS6" id="wQA-Pe-rx6"/>
                 <outlet property="typingIndicatorImageViewRightHorizontalConstraint" destination="1Tm-qD-wIK" id="FUp-oC-c0I"/>
-                <outlet property="typingMessageLabel" destination="Bvy-UQ-HiF" id="EJH-WU-ALC"/>
+                <outlet property="typingMessageLabel" destination="Bvy-UQ-HiF" id="bu5-cn-ZLJ"/>
             </connections>
         </collectionReusableView>
     </objects>

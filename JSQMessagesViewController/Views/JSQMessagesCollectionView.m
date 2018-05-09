@@ -29,6 +29,7 @@
 
 
 @interface JSQMessagesCollectionView () <JSQMessagesLoadEarlierHeaderViewDelegate>
+//UILabel *typingMessageLabel = [[UILabel alloc]initWithFrame:CGRectMake(91, 15, 0, 0)];
 
 - (void)jsq_configureCollectionView;
 
@@ -101,13 +102,22 @@
     JSQMessagesTypingIndicatorFooterView *footerView = [super dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                                                                                  withReuseIdentifier:[JSQMessagesTypingIndicatorFooterView footerReuseIdentifier]
                                                                                         forIndexPath:indexPath];
+    _typingMessageLabel = [footerView getTypingMessageLabel];
 
+//    _typingMessageLabel.text = @"111";
     [footerView configureWithEllipsisColor:self.typingIndicatorEllipsisColor
                         messageBubbleColor:self.typingIndicatorMessageBubbleColor
                        shouldDisplayOnLeft:self.typingIndicatorDisplaysOnLeft
                          forCollectionView:self];
     
+    
     return footerView;
+}
+
+- (void)setTypingMessage:(NSString *)message
+{
+//    _typingMessageLabel = [footerView getTypingMessageLabel];
+    _typingMessageLabel.text = message;
 }
 
 #pragma mark - Load earlier messages header

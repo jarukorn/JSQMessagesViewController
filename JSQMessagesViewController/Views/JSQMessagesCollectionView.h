@@ -76,7 +76,7 @@
  *  The color of the text in the load earlier messages header. The default value is a bright blue color.
  */
 @property (strong, nonatomic) UIColor *loadEarlierMessagesHeaderTextColor;
-
+@property (strong, nonatomic) UILabel *typingMessageLabel;
 /**
  *  Returns a `JSQMessagesTypingIndicatorFooterView` object for the specified index path
  *  that is configured using the collection view's properties:
@@ -97,5 +97,5 @@
  *  @return A valid `JSQMessagesLoadEarlierHeaderView` object.
  */
 - (JSQMessagesLoadEarlierHeaderView *)dequeueLoadEarlierMessagesViewHeaderForIndexPath:(NSIndexPath *)indexPath;
-
+- (void)setTypingMessage:(NSString *)message;
 @end
