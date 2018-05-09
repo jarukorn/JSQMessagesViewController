@@ -230,11 +230,10 @@ JSQMessagesKeyboardControllerDelegate>
 
 #pragma mark - Setters
 
-//- (void)setShowTypingMessageLabel:(UILabel *)typingMessageLabel
-//{
-//    typingMessageLabel = @"123";
-//    _typingMessageLabel = typingMessageLabel;
-//}
+- (void)setShowTypingMessageLabel:(UILabel *)typingMessageLabel
+{
+    _typingMessageLabel = typingMessageLabel;
+}
 //
 //- (void)setTypingMessage:(NSString *)message
 //{
