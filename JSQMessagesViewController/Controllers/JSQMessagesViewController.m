@@ -632,7 +632,8 @@ JSQMessagesKeyboardControllerDelegate>
     
     
     NSString *timeForDateString = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:[messageItem date]];
-    cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
+//  hide setting value in lib to can customize code at view controller
+//    cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
     cell.readStatusLabel.text = [messageItem readStatus];
     
     CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 40.0f : 15.0f;
