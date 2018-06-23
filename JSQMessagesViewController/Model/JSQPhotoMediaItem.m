@@ -87,7 +87,7 @@
         
         CGSize size = CGSizeMake(newImageWidth, newImageHeight);
         imageView.frame = CGRectMake(0.0f, 0.0f, size.width, size.height);
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
         
         NSLog(@"newImageHeight:  %f", newImageHeight);
         NSLog(@"newImageWidth:  %f", newImageWidth);
