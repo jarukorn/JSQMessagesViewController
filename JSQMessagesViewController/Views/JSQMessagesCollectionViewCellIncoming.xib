@@ -65,7 +65,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYQ-xm-UfJ" userLabel="Avatar container">
-                        <rect key="frame" x="0.0" y="20" width="34" height="34"/>
+                        <rect key="frame" x="0.0" y="25" width="34" height="34"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZBf-43-LCm" userLabel="Avatar Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -114,7 +114,7 @@
             </view>
             <constraints>
                 <constraint firstItem="L7P-ZK-ane" firstAttribute="top" secondItem="ZFV-UN-Esn" secondAttribute="bottom" id="0pK-MY-9dM"/>
-                <constraint firstItem="QYQ-xm-UfJ" firstAttribute="top" secondItem="ZFV-UN-Esn" secondAttribute="bottom" id="2ze-q1-1Pu"/>
+                <constraint firstItem="QYQ-xm-UfJ" firstAttribute="top" secondItem="ZFV-UN-Esn" secondAttribute="bottom" constant="5" id="2ze-q1-1Pu"/>
                 <constraint firstItem="ZFV-UN-Esn" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="9Bg-mL-0E3"/>
                 <constraint firstItem="HFr-C4-XZD" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="trailing" constant="5" id="Dqb-5H-Oim"/>
                 <constraint firstAttribute="trailing" secondItem="fBo-fA-HtW" secondAttribute="trailing" id="Fsz-4Q-F8m"/>
