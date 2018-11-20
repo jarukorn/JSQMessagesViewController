@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bubble top label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7P-ZK-ane" userLabel="Bubble top label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="0.0" y="20" width="320" height="20"/>
+                        <rect key="frame" x="34" y="20" width="286" height="20"/>
                         <color key="backgroundColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="p6M-fU-N2U"/>
@@ -65,7 +65,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYQ-xm-UfJ" userLabel="Avatar container">
-                        <rect key="frame" x="0.0" y="120" width="34" height="34"/>
+                        <rect key="frame" x="0.0" y="20" width="34" height="34"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZBf-43-LCm" userLabel="Avatar Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -101,7 +101,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFr-C4-XZD" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="285" y="122" width="35" height="15"/>
+                        <rect key="frame" x="285" y="123" width="35" height="15"/>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="yyo-dX-UbN"/>
@@ -114,24 +114,24 @@
             </view>
             <constraints>
                 <constraint firstItem="L7P-ZK-ane" firstAttribute="top" secondItem="ZFV-UN-Esn" secondAttribute="bottom" id="0pK-MY-9dM"/>
+                <constraint firstItem="QYQ-xm-UfJ" firstAttribute="top" secondItem="ZFV-UN-Esn" secondAttribute="bottom" id="2ze-q1-1Pu"/>
                 <constraint firstItem="ZFV-UN-Esn" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="9Bg-mL-0E3"/>
                 <constraint firstItem="HFr-C4-XZD" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="trailing" constant="5" id="Dqb-5H-Oim"/>
                 <constraint firstAttribute="trailing" secondItem="fBo-fA-HtW" secondAttribute="trailing" id="Fsz-4Q-F8m"/>
                 <constraint firstItem="SNA-er-it0" firstAttribute="top" secondItem="naF-k5-FCA" secondAttribute="bottom" id="JKB-O4-V9b"/>
                 <constraint firstItem="ZFV-UN-Esn" firstAttribute="top" secondItem="Myh-WT-0iC" secondAttribute="top" id="L8g-wd-vgc"/>
-                <constraint firstItem="fBo-fA-HtW" firstAttribute="top" secondItem="HFr-C4-XZD" secondAttribute="bottom" constant="2" id="LZp-Bd-8vA"/>
+                <constraint firstItem="fBo-fA-HtW" firstAttribute="top" secondItem="HFr-C4-XZD" secondAttribute="bottom" constant="1" id="LZp-Bd-8vA"/>
                 <constraint firstAttribute="trailing" secondItem="L7P-ZK-ane" secondAttribute="trailing" id="MpG-jG-NAh"/>
                 <constraint firstAttribute="trailing" secondItem="ZFV-UN-Esn" secondAttribute="trailing" id="X0w-g4-UPr"/>
                 <constraint firstItem="naF-k5-FCA" firstAttribute="top" secondItem="L7P-ZK-ane" secondAttribute="bottom" id="Xen-0c-Gsn"/>
                 <constraint firstAttribute="trailing" secondItem="HFr-C4-XZD" secondAttribute="trailing" id="YZZ-i8-nsZ"/>
                 <constraint firstAttribute="trailing" secondItem="SNA-er-it0" secondAttribute="trailing" id="ebN-yb-MPJ"/>
                 <constraint firstAttribute="bottom" secondItem="SNA-er-it0" secondAttribute="bottom" id="ezP-pf-mLO"/>
-                <constraint firstItem="L7P-ZK-ane" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="h6D-mh-YL3"/>
                 <constraint firstItem="QYQ-xm-UfJ" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="iAn-v7-UT7"/>
                 <constraint firstItem="SNA-er-it0" firstAttribute="top" secondItem="fBo-fA-HtW" secondAttribute="bottom" id="kFV-ji-jUo"/>
                 <constraint firstItem="SNA-er-it0" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="mna-QU-Nr9"/>
+                <constraint firstItem="L7P-ZK-ane" firstAttribute="leading" secondItem="QYQ-xm-UfJ" secondAttribute="trailing" id="nyH-TR-Ktc"/>
                 <constraint firstItem="naF-k5-FCA" firstAttribute="leading" secondItem="QYQ-xm-UfJ" secondAttribute="trailing" constant="2" id="rgR-25-2Dd"/>
-                <constraint firstItem="SNA-er-it0" firstAttribute="top" secondItem="QYQ-xm-UfJ" secondAttribute="bottom" id="wIy-Bx-kPG"/>
                 <constraint firstItem="fBo-fA-HtW" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="trailing" constant="5" id="wls-yo-KdU"/>
             </constraints>
             <size key="customSize" width="317" height="273"/>
@@ -157,7 +157,7 @@
                 <outlet property="textViewMarginHorizontalSpaceConstraint" destination="e0k-ot-XpU" id="wNy-p0-Lvr"/>
                 <outlet property="textViewTopVerticalSpaceConstraint" destination="MFQ-Qv-n4l" id="tnL-es-EZz"/>
             </connections>
-            <point key="canvasLocation" x="255" y="402"/>
+            <point key="canvasLocation" x="408" y="361.61919040479762"/>
         </collectionViewCell>
     </objects>
 </document>

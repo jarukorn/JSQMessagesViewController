@@ -637,7 +637,7 @@ JSQMessagesKeyboardControllerDelegate>
 //    cell.cellBottomLabel.text = timeForDateString == nil ? @"" : timeForDateString;
     cell.readStatusLabel.text = [messageItem readStatus];
     
-    CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 40.0f : 15.0f;
+    CGFloat bubbleTopLabelInset = (avatarImageDataSource != nil) ? 10.0f : 15.0f;
 
     if (isOutgoingMessage) {
         cell.messageBubbleTopLabel.textInsets = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, bubbleTopLabelInset);
