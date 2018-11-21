@@ -42,7 +42,7 @@
                         <rect key="frame" x="40" y="40" width="244" height="114"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMv-U6-n1D" userLabel="Bubble Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="238" height="114"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cex-pa-3Ri" customClass="JSQMessagesCellTextView">
                                 <rect key="frame" x="0.0" y="0.0" width="238" height="114"/>
@@ -56,7 +56,7 @@
                             <constraint firstAttribute="trailing" secondItem="cex-pa-3Ri" secondAttribute="trailing" constant="6" id="AcF-Uc-jVt"/>
                             <constraint firstAttribute="bottom" secondItem="cMv-U6-n1D" secondAttribute="bottom" id="EMk-UH-gKw"/>
                             <constraint firstItem="cex-pa-3Ri" firstAttribute="leading" secondItem="CAs-hE-cbE" secondAttribute="leading" id="FtN-be-vcB"/>
-                            <constraint firstAttribute="trailing" secondItem="cMv-U6-n1D" secondAttribute="trailing" id="Jnd-AI-R7o"/>
+                            <constraint firstAttribute="trailing" secondItem="cMv-U6-n1D" secondAttribute="trailing" constant="6" id="Jnd-AI-R7o"/>
                             <constraint firstAttribute="bottom" secondItem="cex-pa-3Ri" secondAttribute="bottom" id="NvP-el-6dx"/>
                             <constraint firstAttribute="width" constant="244" id="RwJ-v1-BC6"/>
                             <constraint firstItem="cex-pa-3Ri" firstAttribute="top" secondItem="CAs-hE-cbE" secondAttribute="top" id="Vfw-7c-I79"/>
