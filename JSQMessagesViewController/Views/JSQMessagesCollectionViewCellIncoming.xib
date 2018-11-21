@@ -42,7 +42,7 @@
                         <rect key="frame" x="36" y="40" width="244" height="114"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-Pb-IYj" userLabel="Bubble Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="114"/>
+                                <rect key="frame" x="6" y="0.0" width="238" height="114"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glw-q0-5eK" customClass="JSQMessagesCellTextView">
                                 <rect key="frame" x="6" y="0.0" width="238" height="114"/>
@@ -60,7 +60,7 @@
                             <constraint firstAttribute="width" constant="244" id="agx-UD-Ts6"/>
                             <constraint firstAttribute="trailing" secondItem="glw-q0-5eK" secondAttribute="trailing" id="e0k-ot-XpU"/>
                             <constraint firstAttribute="bottom" secondItem="bVS-Pb-IYj" secondAttribute="bottom" id="hnv-EX-p9s"/>
-                            <constraint firstItem="bVS-Pb-IYj" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="leading" id="pbh-OS-Fi2"/>
+                            <constraint firstItem="bVS-Pb-IYj" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="leading" constant="6" id="pbh-OS-Fi2"/>
                             <constraint firstAttribute="bottom" secondItem="glw-q0-5eK" secondAttribute="bottom" id="u4e-PB-gv2"/>
                         </constraints>
                     </view>
