@@ -39,13 +39,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAs-hE-cbE" userLabel="Bubble container">
-                        <rect key="frame" x="37" y="40" width="244" height="114"/>
+                        <rect key="frame" x="40" y="40" width="244" height="114"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMv-U6-n1D" userLabel="Bubble Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="244" height="114"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cex-pa-3Ri" customClass="JSQMessagesCellTextView">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="238" height="114"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -53,7 +53,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cex-pa-3Ri" secondAttribute="trailing" id="AcF-Uc-jVt"/>
+                            <constraint firstAttribute="trailing" secondItem="cex-pa-3Ri" secondAttribute="trailing" constant="6" id="AcF-Uc-jVt"/>
                             <constraint firstAttribute="bottom" secondItem="cMv-U6-n1D" secondAttribute="bottom" id="EMk-UH-gKw"/>
                             <constraint firstItem="cex-pa-3Ri" firstAttribute="leading" secondItem="CAs-hE-cbE" secondAttribute="leading" id="FtN-be-vcB"/>
                             <constraint firstAttribute="trailing" secondItem="cMv-U6-n1D" secondAttribute="trailing" id="Jnd-AI-R7o"/>
@@ -91,7 +91,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPc-KV-fF6" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="0.0" y="139" width="32" height="15"/>
+                        <rect key="frame" x="0.0" y="139" width="35" height="15"/>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="z56-HZ-BAJ"/>
@@ -101,7 +101,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell read status label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXC-9x-TBB" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="0.0" y="123" width="32" height="15"/>
+                        <rect key="frame" x="0.0" y="123" width="35" height="15"/>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="rAL-kU-Pyf"/>
@@ -123,7 +123,7 @@
                 <constraint firstItem="XGn-zc-irT" firstAttribute="leading" secondItem="EF4-Of-SSc" secondAttribute="trailing" id="JWN-vv-HlP"/>
                 <constraint firstItem="EF4-Of-SSc" firstAttribute="leading" secondItem="aQR-wo-KtU" secondAttribute="leading" id="N1j-Sy-EPa"/>
                 <constraint firstAttribute="trailing" secondItem="d4v-YP-EOo" secondAttribute="trailing" id="Rja-ip-o5n"/>
-                <constraint firstItem="XGn-zc-irT" firstAttribute="leading" secondItem="CAs-hE-cbE" secondAttribute="trailing" constant="5" id="RtA-vb-iOC"/>
+                <constraint firstItem="XGn-zc-irT" firstAttribute="leading" secondItem="CAs-hE-cbE" secondAttribute="trailing" constant="2" id="RtA-vb-iOC"/>
                 <constraint firstItem="CAs-hE-cbE" firstAttribute="leading" secondItem="bXC-9x-TBB" secondAttribute="trailing" constant="5" id="Ssp-JA-8iU"/>
                 <constraint firstItem="CAs-hE-cbE" firstAttribute="leading" secondItem="nPc-KV-fF6" secondAttribute="trailing" constant="5" id="TA8-NL-X6Q"/>
                 <constraint firstItem="26z-R2-9XJ" firstAttribute="leading" secondItem="aQR-wo-KtU" secondAttribute="leading" id="YJL-zf-AIL"/>
