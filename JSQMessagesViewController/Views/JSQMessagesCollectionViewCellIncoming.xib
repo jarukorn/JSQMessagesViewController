@@ -39,13 +39,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naF-k5-FCA" userLabel="Bubble container">
-                        <rect key="frame" x="36" y="40" width="244" height="114"/>
+                        <rect key="frame" x="42" y="40" width="244" height="114"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-Pb-IYj" userLabel="Bubble Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="244" height="114"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glw-q0-5eK" customClass="JSQMessagesCellTextView">
-                                <rect key="frame" x="6" y="0.0" width="238" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="114"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -55,7 +55,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bVS-Pb-IYj" secondAttribute="trailing" id="7tS-x2-bj9"/>
                             <constraint firstItem="glw-q0-5eK" firstAttribute="top" secondItem="naF-k5-FCA" secondAttribute="top" id="MFQ-Qv-n4l"/>
-                            <constraint firstItem="glw-q0-5eK" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="leading" constant="6" id="NX3-KU-c4l"/>
+                            <constraint firstItem="glw-q0-5eK" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="leading" id="NX3-KU-c4l"/>
                             <constraint firstItem="bVS-Pb-IYj" firstAttribute="top" secondItem="naF-k5-FCA" secondAttribute="top" id="WAo-HV-Fcb"/>
                             <constraint firstAttribute="width" constant="244" id="agx-UD-Ts6"/>
                             <constraint firstAttribute="trailing" secondItem="glw-q0-5eK" secondAttribute="trailing" id="e0k-ot-XpU"/>
@@ -91,7 +91,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBo-fA-HtW" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="285" y="139" width="35" height="15"/>
+                        <rect key="frame" x="291" y="139" width="29" height="15"/>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="diF-Gd-gTn"/>
@@ -101,7 +101,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFr-C4-XZD" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="285" y="123" width="35" height="15"/>
+                        <rect key="frame" x="291" y="123" width="29" height="15"/>
                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="yyo-dX-UbN"/>
@@ -131,7 +131,7 @@
                 <constraint firstItem="SNA-er-it0" firstAttribute="top" secondItem="fBo-fA-HtW" secondAttribute="bottom" id="kFV-ji-jUo"/>
                 <constraint firstItem="SNA-er-it0" firstAttribute="leading" secondItem="Myh-WT-0iC" secondAttribute="leading" id="mna-QU-Nr9"/>
                 <constraint firstItem="L7P-ZK-ane" firstAttribute="leading" secondItem="QYQ-xm-UfJ" secondAttribute="trailing" id="nyH-TR-Ktc"/>
-                <constraint firstItem="naF-k5-FCA" firstAttribute="leading" secondItem="QYQ-xm-UfJ" secondAttribute="trailing" constant="2" id="rgR-25-2Dd"/>
+                <constraint firstItem="naF-k5-FCA" firstAttribute="leading" secondItem="QYQ-xm-UfJ" secondAttribute="trailing" constant="8" id="rgR-25-2Dd"/>
                 <constraint firstItem="fBo-fA-HtW" firstAttribute="leading" secondItem="naF-k5-FCA" secondAttribute="trailing" constant="5" id="wls-yo-KdU"/>
             </constraints>
             <size key="customSize" width="317" height="273"/>
