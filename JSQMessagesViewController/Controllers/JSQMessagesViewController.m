@@ -357,7 +357,7 @@ JSQMessagesKeyboardControllerDelegate>
 {
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     if (self.showTypingIndicator) {
-        self.showTypingIndicator = NO;
+//        self.showTypingIndicator = NO;
         self.showTypingIndicator = YES;
         [self.collectionView reloadData];
     }
@@ -426,7 +426,8 @@ JSQMessagesKeyboardControllerDelegate>
 
 - (void)finishReceivingMessageAnimated:(BOOL)animated {
 
-    self.showTypingIndicator = NO;
+    //self.showTypingIndicator = NO;
+    self.showTypingIndicator = YES;
 
     [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
     [self.collectionView reloadData];

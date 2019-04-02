@@ -157,7 +157,7 @@
     /**
      *  Show the typing indicator to be shown
      */
-    self.showTypingIndicator = !self.showTypingIndicator;
+//    self.showTypingIndicator = !self.showTypingIndicator;
     
     /**
      *  Scroll to actually view the indicator
